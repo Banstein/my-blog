@@ -2,7 +2,7 @@
 
 > This is an app build on Ruby on Rails that will help users to show thier list of posts and comments and liked posts.
 
-## Screenshot
+## Diagram
 
 ![Diagram](./img_1.png)
 
