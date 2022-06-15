@@ -4,7 +4,7 @@
 
 ## Screenshot
 
-[Diagram](./img_1.png)
+![Diagram](./img_1.png)
 
 ## Built With
 
