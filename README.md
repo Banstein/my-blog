@@ -1,4 +1,4 @@
-# # my-blog
+## my-blog
 
 > This is an app build on Ruby on Rails that will help users to show thier list of posts and comments and liked posts.
 
