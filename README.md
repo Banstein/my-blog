@@ -1,10 +1,10 @@
 # # my-blog
 
-> School library app that implement the classes to represent students and teachers.
+> This is an app build on Ruby on Rails that will help users to show thier list of posts and comments and liked posts.
 
 ## Screenshot
 
-[MIT](./img_1)
+[img](./img_1)
 
 ## Built With
 
