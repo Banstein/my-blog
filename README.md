@@ -1,24 +1,50 @@
-# README
+# # my-blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> School library app that implement the classes to represent students and teachers.
 
-Things you may want to cover:
+## Screenshot
 
-* Ruby version
+[MIT](./img_1)
 
-* System dependencies
+## Built With
 
-* Configuration
+- RUBY
+- TERMINAL
 
-* Database creation
 
-* Database initialization
+## Getting Started
 
-* How to run the test suite
+Start by cloning the repository.
 
-* Services (job queues, cache servers, search engines, etc.)
+`https://github.com/Banstein/my-blog.git`
 
-* Deployment instructions
+Navigate to the created folder.
 
-* ...
+`cd decode-my-blog`
+
+Start the development server
+
+`rails server`
+
+## Authors
+
+👤 Islam Bahnas
+
+- GitHub: [@Banstein](https://github.com/Banstein)
+- Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
+- LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Banstein/my-blog/issues).
+
+## Show your support
+
+Give a ⭐ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
