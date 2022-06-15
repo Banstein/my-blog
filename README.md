@@ -20,7 +20,7 @@ Start by cloning the repository.
 
 Navigate to the created folder.
 
-`cd decode-my-blog`
+`cd my-blog`
 
 Start the development server
 
