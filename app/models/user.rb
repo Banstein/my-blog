@@ -9,3 +9,8 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 end
+
+class Comment < ApplicationRecord
+  belongs_to :user
+  belongs_to :post
+end
