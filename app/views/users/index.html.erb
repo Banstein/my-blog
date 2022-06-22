@@ -1,9 +1,15 @@
-<h1>Users List</h1>
-<p>List of users.</p>
-<div>
-  <div></div>
-  <div>
-    <h2></h2>
-    <p></p>
-  </div>
-</div>
+<main>
+  <ul>
+    <% @users.each do |user|%>
+      <%= link_to user do %>
+        <li>
+          <div></div>
+          <div>
+            <h1><%= user.name %></h1>
+            <p>Number of posts: <%= user.posts_counter %></p>
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</main>
