@@ -1,2 +1,37 @@
-<h1>User</h1>
-<p>Show details of an user.</p>
+<main>
+  <section>
+    <div class="card-user">
+      <div class="user-wrapper">
+        <div class="user-img"></div>
+        <div class="user-data">
+          <h1><%= @user.name %></h1>
+          <p>Number of posts: <%= @user.posts_counter %></p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="bio">
+        <h3>Bio</h3>
+        <p><%= @user.bio %></p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <ul>
+      <% @user.recent_posts.each do |post| %>
+        <%= link_to user_posts_path(@user) do %>
+          <li class="posts mb-20">
+            <h3><%= post.title%></h3>
+            <h4><%= post.text%></h4>
+            <div class="react-wrapper">
+              <span class="react">Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %> </span>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <div class="general-posts">
+      <%= link_to "See all posts", user_posts_path(user_id: @user.id)%>
+    </div>
+  </section> 
+</main>
