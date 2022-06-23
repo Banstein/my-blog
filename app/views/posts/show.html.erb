@@ -1,2 +1,16 @@
-<h1>Post</h1>
-<p>Show details of post for given user.</p>
+<main>
+  <section>
+    <div>
+      <h2><%= @post.title %></h2>
+      <p><%= @post.text %></p>
+    </div>
+    <div>
+      <h4>Comments:</h4>
+      <ul>
+        <% @post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+</main>
