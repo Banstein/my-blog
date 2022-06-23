@@ -1,11 +1,13 @@
 <main>
   <%# user info %>
   <section>
-    <div>
-      <div></div>
-      <div>
-        <h1><%= @user.name %></h1>
-        <p>Number of posts: <%= @user.posts_counter %></p>
+    <div class="card-user">
+      <div class="user-wrapper">
+        <div class="user-img"></div>
+        <div class="user-data">
+          <h1><%= @user.name %></h1>
+          <p>Number of posts: <%= @user.posts_counter %></p>
+        </div>
       </div>
     </div>
   </section>
@@ -15,18 +17,16 @@
       <% @posts.each do |post| %>
         <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
           <li>
-            <div>
+            <div class="posts">
               <h2><%= post.title %></h2>
               <p><%= post.text %></p>
-              <div>
-                <span>Comments: <%= post.comments_counter %></span>
-                <span>Likes: <%= post.likes_counter %> </span>
+              <div class="react-wrapper">
+                <span class="react">Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %> </span>
               </div>
             </div>
             <div>
-              <h4>Comments:</h4>
               <%# comment show %>
-              <ul>
+              <ul class="comment">
                 <% post.recents_comments.each do |comment| %>
                   <p><%= comment.author.name %>: <%= comment.text %></p>
                 <% end %>

@@ -1,12 +1,11 @@
 <main>
   <section>
-    <div>
+    <div class="posts">
       <h2><%= @post.title %></h2>
       <p><%= @post.text %></p>
     </div>
     <div>
-      <h4>Comments:</h4>
-      <ul>
+      <ul class="comment">
         <% @post.comments.each do |comment| %>
           <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>

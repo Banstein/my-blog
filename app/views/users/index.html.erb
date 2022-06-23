@@ -1,12 +1,12 @@
 <main>
-  <ul>
+  <ul class="card-user">
     <% @users.each do |user|%>
       <%= link_to user do %>
-        <li>
-          <div></div>
-          <div>
+        <li class="user-wrapper">
+          <div class="user-img"></div>
+          <div class="user-data">
             <h1><%= user.name %></h1>
-            <p>Number of posts: <%= user.posts_counter %></p>
+            <h6>Number of posts:<%= user.posts_counter %></h6>
           </div>
         </li>
       <% end %>
