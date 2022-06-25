@@ -9,6 +9,9 @@
           <p>Number of posts: <%= @user.posts_counter %></p>
         </div>
       </div>
+      <div class="general-posts new-post">
+        <%= link_to "Add new post", new_user_post_path(@user), class: "btn btn-primary" %>
+      </div>
     </div>
   </section>
   <%# post show %>
