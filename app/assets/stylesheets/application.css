@@ -30,6 +30,10 @@ body {
   margin: 0 auto 50px auto;
 }
 
+.new-post {
+  margin-bottom: 50px;
+}
+
 .user-data {
   display: flex;
   justify-content: space-between;

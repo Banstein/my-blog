@@ -1,0 +1,10 @@
+<h2>What's on your mind?</h2>
+<div>
+  <%= form_with model: @post, url: user_posts_url, method: :post do |form| %>
+    <div>
+      <%= form.text_field :title, :placeholder=> "Title" %> <br> <br>
+        <%= form.text_area :text, :placeholder=> "Write Something", cols: 40, rows: 10 %> <br> <br>
+          <%= form.submit "Submit" %>
+    </div>
+    <% end %>
+</div> 
