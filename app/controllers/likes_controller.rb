@@ -8,7 +8,7 @@ class LikesController < ApplicationController
     @like = @post.likes.new(author_id: current_user.id, post_id: @post)
 
     if @like.save
-      redirect_to user_post_path(user_id: @post.author_id, id: @post.id)
+      redirect_to user_post_path(user_id: @post.author_id, id: @post.id), notice: 'you Liked this post!'
     else
       render :new, alert: 'An error occurred'
     end
