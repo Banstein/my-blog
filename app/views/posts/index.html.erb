@@ -7,8 +7,10 @@
         <div class="user-data">
           <h1><%= @user.name %></h1>
           <p>Number of posts: <%= @user.posts_counter %></p>
-          <%= link_to "Add new post", new_user_post_path(@user), class: "btn btn-primary" %>
         </div>
+      </div>
+      <div class="general-posts new-post">
+        <%= link_to "Add new post", new_user_post_path(@user), class: "btn btn-primary" %>
       </div>
     </div>
   </section>
