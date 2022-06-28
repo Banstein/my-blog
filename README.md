@@ -34,6 +34,18 @@ Start the development server
 - Twitter: [@islam_bahnas](https://twitter.com/islam_bahnas)
 - LinkedIn: [islam-bahnas](www.linkedin.com/in/islam-bahnas)
 
+👤 **Nicholas Mutale**
+
+- GitHub: [@mutalenic](https://github.com/Mutalenic)
+- Twitter: [@nicomutale](https://twitter.com/nicomutale)
+- LinkedIn: [@nicomutale](https://www.linkedin.com/in/nicomutale/)
+
+👤 **Bonke**
+
+- GitHub: [@githubhandle](https://github.com/bonkegcobo)
+- Twitter: [@twitterhandle](https://twitter.com/bonkegcobo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/bonkegcobo)
+
 
 ## 🤝 Contributing
 
