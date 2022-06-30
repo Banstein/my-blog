@@ -4,30 +4,24 @@
       <h2><%= @post.title %></h2>
       <p><%= @post.text %></p>
     </div>
-    <div>
     <% if user_signed_in? %>
-      <div class="general-posts new-post">
-        <%= link_to "Add new comment", new_user_post_comment_url(user_id: @post.author_id, post_id: @post.id )%>
-      </div>
-      <%= form_with model: @like, url: user_post_likes_url(post_id: @post.id) do |form| %>
+      <div>
+        <div class="general-posts new-post">
+          <%= link_to "Add new comment", new_user_post_comment_url(user_id: @post.author_id, post_id: @post.id )%>
+        </div>
+        <%= form_with model: @like, url: user_post_likes_url(post_id: @post.id) do |form| %>
         <%= form.submit "Hit Like", class: "butn" %>
+        <% end %>
         <% if can? :destroy, @post %>
           <%= button_to "Delete post", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete, class: "btn" %>
         <% end %>
-      <% end %>
+      </div>
     <% end %>
-    </div>
     <div >
       <ul class="comment">
-        <% @post.comments.includes(:author).includes(:post).each do |comment| %>
-          <li>
-            <p><%= comment.author.name %>: <%= comment.text %></p>
-            <% if can? :destroy, comment %>
-              <%= button_to "Delete", user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), method: :delete, class: "btn"  %>
-            <% end %>
-          </li>
+        <% @post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
-      <% end %>
       </ul>
     </div>
   </section>
