@@ -13,6 +13,9 @@
   <body>
     <p class="notification"><%= notice %></p>
     <p class="notification"><%= alert %></p>
+    <% if user_signed_in? %>
+      <%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
