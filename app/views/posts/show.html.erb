@@ -4,14 +4,19 @@
       <h2><%= @post.title %></h2>
       <p><%= @post.text %></p>
     </div>
-    <div>
-      <div class="general-posts new-post">
-        <%= link_to "Add new comment", new_user_post_comment_url(user_id: @post.author_id, post_id: @post.id )%>
+    <% if user_signed_in? %>
+      <div>
+        <div class="general-posts new-post">
+          <%= link_to "Add new comment", new_user_post_comment_url(user_id: @post.author_id, post_id: @post.id )%>
+        </div>
+        <%= form_with model: @like, url: user_post_likes_url(post_id: @post.id) do |form| %>
+        <%= form.submit "Hit Like", class: "butn" %>
+        <% end %>
+        <% if can? :destroy, @post %>
+          <%= button_to "Delete post", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete, class: "btn" %>
+        <% end %>
       </div>
-      <%= form_with model: @like, url: user_post_likes_url(post_id: @post.id) do |form| %>
-      <%= form.submit "Hit Like", class: "butn" %>
-      <% end %>
-    </div>
+    <% end %>
     <div >
       <ul class="comment">
         <% @post.comments.each do |comment| %>

@@ -10,7 +10,9 @@
         </div>
       </div>
       <div class="general-posts new-post">
-        <%= link_to "Add new post", new_user_post_path(@user), class: "btn btn-primary" %>
+        <% if current_user %>
+          <%= link_to "Add a post",new_user_post_path(@user), method: :get, class: "btn right" %>
+        <% end %>
       </div>
     </div>
   </section>
