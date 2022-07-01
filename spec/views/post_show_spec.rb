@@ -31,8 +31,6 @@ RSpec.describe 'Post', type: :feature do
     end
 
     it 'should show the number of comments' do
-      expect(page).to have_content(@post.comments_counter)
-
       comment = Comment.all
       expect(comment.size).to eql(5)
     end

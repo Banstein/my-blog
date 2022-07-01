@@ -58,7 +58,6 @@ RSpec.describe 'Post', type: :feature do
     end
 
     it 'should display how many likes a post has.' do
-      visit user_post_path(@first_user.id, @post1.id)
       expect(page).to have_content 'Like'
       expect(page).to have_content(@post1.likes_counter)
     end
