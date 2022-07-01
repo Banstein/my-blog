@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'users index', type: :feature do
   before(:each) do
-    @first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+    @first_user = User.create(name: 'Tom', photo: 'pic.png',
                               bio: 'Teacher from Mexico.', email: 'tom@gmail.com', password: '123456')
-    @second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+    @second_user = User.create(name: 'Lilly', photo: 'pic.png',
                                bio: 'Teacher from Poland.', email: 'lilly@gmail.com', password: '123456')
     @first_user.save!
     @second_user.save!
@@ -25,7 +25,7 @@ RSpec.describe 'users index', type: :feature do
     end
 
     it "Shows the user's photo" do
-      expect(page).to have_css('.user-image')
+      expect(page).to have_css('.user-img')
     end
 
     it 'Shows the number of posts' do

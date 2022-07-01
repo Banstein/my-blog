@@ -26,7 +26,7 @@ RSpec.describe 'Post', type: :feature do
 
   describe 'post index page' do
     it "Shows the user's photo" do
-      expect(page).to have_css('.user-image')
+      expect(page).to have_css('.user-img')
     end
 
     it 'Shows the username' do
